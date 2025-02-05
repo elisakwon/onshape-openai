@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Image Comment Generator</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <h1>MIE498 Experiment</h1>
+    
+    <!-- Form to accept the user input -->
+    <form id="comment-form">
+        <label for="prompt">Enter a prompt for the AI:</label><br>
+        <input type="text" id="prompt" name="prompt" placeholder="Describe the image..." required><br><br>
+        <button type="submit">Submit</button>
+    </form>
+    
+    <!-- Div to display the response message -->
+    <div id="response-message"></div>
+
+    <script>
+        $(document).ready(function(){
+            // Prevent the form from reloading the page
+            $('#comment-form').submit(function(event){
+                event.preventDefault();  // Stop the page from refreshing
+                
+                // Get the value of the prompt input field
+                var prompt = $('#prompt').val();
+                
+                // Send the prompt data via AJAX to the Flask endpoint
+                $.ajax({
+                    type: 'POST',
+                    url: '/process-comment',  // The Flask route for processing
+                    data: { prompt: prompt },
+                    success: function(response) {
+                        // Display the AI response or success message
+                        $('#response-message').html('<p>' + response.message + '</p>');
+                    },
+                    error: function(xhr, status, error) {
+                        // Display error if any occurs
+                        $('#response-message').html('<p style="color:red;">' + xhr.responseJSON.error + '</p>');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
