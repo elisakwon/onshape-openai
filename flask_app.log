@@ -1,0 +1,145 @@
+2025-01-21 22:11:22,678 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-21 22:11:22,678 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-21 22:11:22,679 - INFO -  * Restarting with stat
+2025-01-21 22:11:23,503 - WARNING -  * Debugger is active!
+2025-01-21 22:11:23,505 - INFO -  * Debugger PIN: 156-512-041
+2025-01-21 22:11:35,118 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-21 22:11:35,118 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-21 22:11:35,119 - INFO -  * Restarting with stat
+2025-01-21 22:11:35,966 - WARNING -  * Debugger is active!
+2025-01-21 22:11:35,967 - INFO -  * Debugger PIN: 156-512-041
+2025-01-21 22:11:50,312 - INFO - 127.0.0.1 - - [21/Jan/2025 22:11:50] "[31m[1mGET /process-comment HTTP/1.1[0m" 405 -
+2025-01-21 22:11:55,036 - INFO - 127.0.0.1 - - [21/Jan/2025 22:11:55] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-01-21 22:11:55,168 - INFO - 127.0.0.1 - - [21/Jan/2025 22:11:55] "GET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-01-21 22:11:55,173 - INFO - 127.0.0.1 - - [21/Jan/2025 22:11:55] "GET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-01-21 22:11:55,215 - INFO - 127.0.0.1 - - [21/Jan/2025 22:11:55] "GET /?__debugger__=yes&cmd=resource&f=console.png&s=xIw8nRS7EkrjHK9X8O59 HTTP/1.1" 200 -
+2025-01-21 22:11:55,270 - INFO - 127.0.0.1 - - [21/Jan/2025 22:11:55] "GET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-01-21 22:14:10,228 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-21 22:14:10,228 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-21 22:14:10,229 - INFO -  * Restarting with stat
+2025-01-21 22:14:11,031 - WARNING -  * Debugger is active!
+2025-01-21 22:14:11,033 - INFO -  * Debugger PIN: 156-512-041
+2025-01-21 22:17:17,728 - INFO - 127.0.0.1 - - [21/Jan/2025 22:17:17] "GET / HTTP/1.1" 200 -
+2025-01-21 22:17:30,903 - INFO - Image fetched successfully.
+2025-01-21 22:17:30,904 - ERROR - Error during OpenAI API call: 
+
+You tried to access openai.ChatCompletion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.
+
+You can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. 
+
+Alternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`
+
+A detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742
+
+2025-01-21 22:17:30,905 - INFO - 127.0.0.1 - - [21/Jan/2025 22:17:30] "[35m[1mPOST /process-comment HTTP/1.1[0m" 500 -
+2025-01-21 22:37:02,554 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-21 22:37:02,554 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-21 22:37:02,555 - INFO -  * Restarting with stat
+2025-01-21 22:37:03,370 - WARNING -  * Debugger is active!
+2025-01-21 22:37:03,372 - INFO -  * Debugger PIN: 156-512-041
+2025-01-21 22:37:04,139 - INFO - 127.0.0.1 - - [21/Jan/2025 22:37:04] "GET / HTTP/1.1" 200 -
+2025-01-21 22:37:07,923 - INFO - Image fetched successfully.
+2025-01-21 22:37:07,923 - ERROR - Error during OpenAI API call: 
+
+You tried to access openai.ChatCompletion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.
+
+You can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. 
+
+Alternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`
+
+A detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742
+
+2025-01-21 22:37:07,924 - INFO - 127.0.0.1 - - [21/Jan/2025 22:37:07] "[35m[1mPOST /process-comment HTTP/1.1[0m" 500 -
+2025-01-21 22:53:22,632 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-21 22:53:22,632 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-21 22:53:22,633 - INFO -  * Restarting with stat
+2025-01-21 22:53:23,432 - WARNING -  * Debugger is active!
+2025-01-21 22:53:23,434 - INFO -  * Debugger PIN: 156-512-041
+2025-01-21 22:53:32,160 - INFO - 127.0.0.1 - - [21/Jan/2025 22:53:32] "GET / HTTP/1.1" 200 -
+2025-01-21 22:53:35,863 - INFO - Image fetched successfully.
+2025-01-21 22:53:39,760 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-21 22:53:39,767 - INFO - Generated text: Hello! It looks like you've shared an image of an impossible object, also known as a Penrose staircase or steps. These are optical illusions that appear to be physically impossible due to their construction. Do you have any questions about it?
+2025-01-21 22:53:40,149 - INFO - Comment added successfully.
+2025-01-21 22:53:40,150 - INFO - 127.0.0.1 - - [21/Jan/2025 22:53:40] "POST /process-comment HTTP/1.1" 200 -
+2025-01-21 23:00:20,853 - INFO - 127.0.0.1 - - [21/Jan/2025 23:00:20] "GET / HTTP/1.1" 200 -
+2025-01-21 23:00:26,938 - INFO - Image fetched successfully.
+2025-01-21 23:00:29,538 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-21 23:00:29,540 - INFO - Generated text: This is an illustration of a Penrose staircase, a famous optical illusion. It depicts a continuous staircase that appears to ascend or descend forever, creating an impossible object. This paradox is a classic example of an Escher-like construct, where the geometry defies logical spatial understanding.
+2025-01-21 23:00:29,864 - INFO - Comment added successfully.
+2025-01-21 23:00:29,865 - INFO - 127.0.0.1 - - [21/Jan/2025 23:00:29] "POST /process-comment HTTP/1.1" 200 -
+2025-01-21 23:00:38,325 - INFO -  * Detected change in 'C:\\Users\\ashwa\\OneDrive\\Desktop\\flask app\\app.py', reloading
+2025-01-21 23:00:38,434 - INFO -  * Restarting with stat
+2025-01-21 23:08:34,355 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-21 23:08:34,355 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-21 23:08:34,356 - INFO -  * Restarting with stat
+2025-01-21 23:08:35,925 - WARNING -  * Debugger is active!
+2025-01-21 23:08:35,928 - INFO -  * Debugger PIN: 156-512-041
+2025-01-21 23:08:39,061 - INFO - Image fetched successfully.
+2025-01-21 23:08:41,579 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-21 23:08:41,585 - INFO - Generated text: This is an image of a Penrose staircase, also known as the impossible staircase. It's an optical illusion and cannot exist in real life as it defies the laws of physics and geometry. It loops continuously without ever reaching a higher or lower level. It’s an interesting concept but not practical for actual use.
+2025-01-21 23:08:41,933 - INFO - Comment added successfully.
+2025-01-21 23:08:41,934 - INFO - 127.0.0.1 - - [21/Jan/2025 23:08:41] "POST /process-comment HTTP/1.1" 200 -
+2025-01-21 23:08:47,477 - INFO - 127.0.0.1 - - [21/Jan/2025 23:08:47] "GET / HTTP/1.1" 200 -
+2025-01-21 23:08:50,619 - INFO - Image fetched successfully.
+2025-01-21 23:08:51,674 - INFO - Image fetched successfully.
+2025-01-21 23:08:52,159 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-21 23:08:52,162 - INFO - Generated text: Hello! What can I help you with today?
+2025-01-21 23:08:52,497 - INFO - Comment added successfully.
+2025-01-21 23:08:52,498 - INFO - 127.0.0.1 - - [21/Jan/2025 23:08:52] "POST /process-comment HTTP/1.1" 200 -
+2025-01-21 23:08:52,986 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-21 23:08:52,989 - INFO - Generated text: Hello! What would you like to know about this object?
+2025-01-21 23:08:53,318 - INFO - Comment added successfully.
+2025-01-21 23:08:53,319 - INFO - 127.0.0.1 - - [21/Jan/2025 23:08:53] "POST /process-comment HTTP/1.1" 200 -
+2025-01-21 23:13:14,214 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-21 23:13:14,215 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-21 23:13:14,215 - INFO -  * Restarting with stat
+2025-01-21 23:13:15,035 - WARNING -  * Debugger is active!
+2025-01-21 23:13:15,036 - INFO -  * Debugger PIN: 156-512-041
+2025-01-21 23:13:16,032 - INFO - 127.0.0.1 - - [21/Jan/2025 23:13:16] "GET / HTTP/1.1" 200 -
+2025-01-21 23:14:15,176 - INFO - Image fetched successfully.
+2025-01-21 23:14:20,483 - INFO - Image fetched successfully.
+2025-01-21 23:14:21,758 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-21 23:14:21,763 - INFO - Generated text: Hello! It looks like you've shared an illustration of an impossible object, similar to an impossible trident or impossible triangle. These objects are optical illusions and can't exist in three-dimensional space. How can I assist you further?
+2025-01-21 23:14:22,075 - INFO - Comment added successfully.
+2025-01-21 23:14:22,075 - INFO - 127.0.0.1 - - [21/Jan/2025 23:14:22] "POST /process-comment HTTP/1.1" 200 -
+2025-01-21 23:14:34,243 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-21 23:14:34,246 - INFO - Generated text: Hello! It looks like you have an image of an M.C. Escher-style impossible object. These types of drawings create optical illusions by depicting forms that can't exist in three-dimensional space. If you have any questions or need more information, feel free to ask!
+2025-01-21 23:14:34,668 - INFO - Comment added successfully.
+2025-01-21 23:14:34,670 - INFO - 127.0.0.1 - - [21/Jan/2025 23:14:34] "POST /process-comment HTTP/1.1" 200 -
+2025-01-21 23:18:23,294 - INFO -  * Detected change in 'C:\\Users\\ashwa\\OneDrive\\Desktop\\flask app\\app.py', reloading
+2025-01-21 23:18:23,416 - INFO -  * Restarting with stat
+2025-01-21 23:18:24,251 - WARNING -  * Debugger is active!
+2025-01-21 23:18:24,253 - INFO -  * Debugger PIN: 156-512-041
+2025-01-22 10:41:45,903 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-22 10:41:45,903 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-22 10:41:45,905 - INFO -  * Restarting with stat
+2025-01-22 10:41:47,064 - WARNING -  * Debugger is active!
+2025-01-22 10:41:47,066 - INFO -  * Debugger PIN: 156-512-041
+2025-01-22 10:42:33,422 - INFO - 127.0.0.1 - - [22/Jan/2025 10:42:33] "[31m[1mGET /process-comment HTTP/1.1[0m" 405 -
+2025-01-22 10:42:33,759 - INFO - 127.0.0.1 - - [22/Jan/2025 10:42:33] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-01-22 10:42:39,358 - INFO - 127.0.0.1 - - [22/Jan/2025 10:42:39] "GET / HTTP/1.1" 200 -
+2025-01-22 10:43:41,038 - INFO - Image fetched successfully.
+2025-01-22 10:43:45,384 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-22 10:43:45,391 - INFO - Generated text: This is an isometric drawing of the Penrose stairs, also known as the "impossible staircase." It's an optical illusion depicting a staircase that appears to be continuously ascending or descending in a loop. This kind of structure could not exist in three-dimensional space; it is a two-dimensional visual paradox.
+2025-01-22 10:43:45,780 - INFO - Comment added successfully.
+2025-01-22 10:43:45,781 - INFO - 127.0.0.1 - - [22/Jan/2025 10:43:45] "POST /process-comment HTTP/1.1" 200 -
+2025-01-28 20:30:12,903 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-28 20:30:12,904 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-28 20:30:12,905 - INFO -  * Restarting with stat
+2025-01-28 20:30:13,735 - WARNING -  * Debugger is active!
+2025-01-28 20:30:13,746 - INFO -  * Debugger PIN: 156-512-041
+2025-01-28 20:30:24,105 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-28 20:30:24,105 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-28 20:30:24,106 - INFO -  * Restarting with stat
+2025-01-28 20:30:24,903 - WARNING -  * Debugger is active!
+2025-01-28 20:30:24,905 - INFO -  * Debugger PIN: 156-512-041
