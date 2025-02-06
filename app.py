@@ -127,4 +127,4 @@ def process_comment():
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000, debug=True)
+    app.run(host='3.133.115.61', port=5000, debug=True)
