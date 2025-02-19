@@ -31,7 +31,7 @@ logging.basicConfig(
 )
 
 # Local directory where images will be saved
-IMAGE_UPLOAD_FOLDER = r"C:\Users\ashwa\OneDrive\Desktop\flask app\IMAGE_UPLOAD_FOLDER"
+#IMAGE_UPLOAD_FOLDER = r"C:\Users\ashwa\OneDrive\Desktop\flask app\IMAGE_UPLOAD_FOLDER"
 
 # Make sure the upload folder exists
 #os.makedirs(IMAGE_UPLOAD_FOLDER, exist_ok=True)
@@ -66,10 +66,10 @@ def process_comment():
         filename = secure_filename(f"{timestamp}_{image_file.filename}")
 
         # Save the image directly
-        image_path = f"{IMAGE_UPLOAD_FOLDER}/{filename}"
-        image.save(image_path)
+        #image_path = f"{IMAGE_UPLOAD_FOLDER}/{filename}"
+        #image.save(image_path)
 
-        logging.info(f"Image saved locally pyat: {image_path}")
+        #logging.info(f"Image saved locally pyat: {image_path}")
 
         '''# Step 1: Fetch Image
         params = {
