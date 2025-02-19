@@ -6,11 +6,14 @@ import time
 import openai
 import logging
 from io import BytesIO
+from PIL import Image
+from werkzeug.utils import secure_filename
+import time
 
 app = Flask(__name__)
 
 # API Credentials
-openai.api_key = 'sk-BdvdR2fxcXoEo8ysIwZsLBMOYTvgW8JMbe_0TvOGeQT3BlbkFJbql_039llyBDaW3LcVsrI0e3ipKELA1xQ0nxaiW5MA'
+openai.api_key = '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'
 API_KEY = 'yNalRooq2QVIxSZNAI3i4vSJ'
 API_SECRET = 'jFLaOBoa8LQgb3qqLgdcxb4JlJe1R665HALCHp3NXhXOQhm6'
 API_KEY2 = 'Av64ZSAvZTRDvbB4IsK9Skc0'
@@ -27,6 +30,11 @@ logging.basicConfig(
     format='%(asctime)s - %(levelname)s - %(message)s',
 )
 
+# Local directory where images will be saved
+IMAGE_UPLOAD_FOLDER = r"C:\Users\ashwa\OneDrive\Desktop\flask app\IMAGE_UPLOAD_FOLDER"
+
+# Make sure the upload folder exists
+#os.makedirs(IMAGE_UPLOAD_FOLDER, exist_ok=True)
 
 @app.route('/')
 def home():
@@ -40,8 +48,30 @@ def process_comment():
     try:
         # Fetch the prompt from the form or JSON
         prompt = request.form.get('prompt') or request.json.get('prompt', 'Describe the image.')
+        prompt= prompt + "IKEA hacking is the practice of modifying, repurposing, or customizing IKEA products to create unique, personalized, or more functional furniture and decor. It often involves combining different pieces, adding new materials, or altering designs to fit specific needs or aesthetics. In this image uploaded image you will see three flat panels, imagine they are materials for building new stuff. now answer based on this. Limit response to 100 words."
+        # Check if an image file was uploaded
+        if 'image' not in request.files:
+            return jsonify({"error": "No image uploaded"}), 400
 
-        # Step 1: Fetch Image
+        image_file = request.files['image']
+
+        # Convert image to base64
+        image = Image.open(image_file)
+        buffered = BytesIO()
+        image.save(buffered, format="PNG")  # Ensure it's in PNG format
+        base64_image = base64.b64encode(buffered.getvalue()).decode('utf-8')
+
+        logging.info("Image received and converted to base64.")
+        timestamp = int(time.time())
+        filename = secure_filename(f"{timestamp}_{image_file.filename}")
+
+        # Save the image directly
+        image_path = f"{IMAGE_UPLOAD_FOLDER}/{filename}"
+        image.save(image_path)
+
+        logging.info(f"Image saved locally pyat: {image_path}")
+
+        '''# Step 1: Fetch Image
         params = {
             "viewMatrix": "isometric",
             "outputHeight": 500,
@@ -69,7 +99,7 @@ def process_comment():
         image_bytes = base64.b64decode(image_data)
         base64_image = base64.b64encode(image_bytes).decode('utf-8')  # Re-encode for OpenAI input
         
-        logging.info("Image fetched successfully.")
+        logging.info("Image fetched successfully.")'''
 
         # Step 2: Generate Text
         try:
@@ -127,4 +157,5 @@ def process_comment():
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000, debug=True)
+    app.run(debug=True)
+
