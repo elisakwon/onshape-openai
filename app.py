@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify, render_template
+from flask import Flask, request, jsonify, render_template, send_from_directory
 from requests_oauthlib import OAuth1
 import requests
 import base64
@@ -9,7 +9,7 @@ from io import BytesIO
 from PIL import Image
 from werkzeug.utils import secure_filename
 import time
-
+import os
 app = Flask(__name__)
 
 # API Credentials
@@ -30,11 +30,9 @@ logging.basicConfig(
     format='%(asctime)s - %(levelname)s - %(message)s',
 )
 
-# Local directory where images will be saved
-#IMAGE_UPLOAD_FOLDER = r"C:\Users\ashwa\OneDrive\Desktop\flask app\IMAGE_UPLOAD_FOLDER"
-
-# Make sure the upload folder exists
-#os.makedirs(IMAGE_UPLOAD_FOLDER, exist_ok=True)
+UPLOAD_FOLDER = "/home/ubuntu/thesis"  # Change to a valid directory
+os.makedirs(UPLOAD_FOLDER, exist_ok=True)
+app.config["UPLOAD_FOLDER"] = UPLOAD_FOLDER
 
 @app.route('/')
 def home():
@@ -64,42 +62,12 @@ def process_comment():
         logging.info("Image received and converted to base64.")
         timestamp = int(time.time())
         filename = secure_filename(f"{timestamp}_{image_file.filename}")
+        image_path = os.path.join(UPLOAD_FOLDER, filename)
 
         # Save the image directly
-        #image_path = f"{IMAGE_UPLOAD_FOLDER}/{filename}"
-        #image.save(image_path)
+        image.save(image_path)
 
         #logging.info(f"Image saved locally pyat: {image_path}")
-
-        '''# Step 1: Fetch Image
-        params = {
-            "viewMatrix": "isometric",
-            "outputHeight": 500,
-            "outputWidth": 500,
-            "pixelSize": 0,
-            "edges": "show",
-            "showAllParts": "true",
-            "includeSurfaces": "false",
-            "useAntiAliasing": "false",
-            "includeWires": "false",
-        }
-        url = f'{BASE_URL}/api/v10/partstudios/d/{document_id}/w/{workspace_id}/e/{element_id}/shadedviews?nocache={int(time.time())}'
-        auth = OAuth1(API_KEY, API_SECRET)
-
-        response = requests.get(url, auth=auth, params=params)
-
-        if response.status_code != 200:
-            logging.error(f"Error fetching image: {response.text}")
-            return jsonify({"error": "Failed to fetch image."}), response.status_code
-
-        data = response.json()
-        image_data = data['images'][0]
-
-        # Decode the base64 image data directly into memory
-        image_bytes = base64.b64decode(image_data)
-        base64_image = base64.b64encode(image_bytes).decode('utf-8')  # Re-encode for OpenAI input
-        
-        logging.info("Image fetched successfully.")'''
 
         # Step 2: Generate Text
         try:
