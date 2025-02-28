@@ -30,9 +30,9 @@ logging.basicConfig(
     format='%(asctime)s - %(levelname)s - %(message)s',
 )
 
-UPLOAD_FOLDER = "/home/ubuntu/thesis"  # Change to a valid directory
-os.mkdir(UPLOAD_FOLDER, exist_ok=True)
-app.config["UPLOAD_FOLDER"] = UPLOAD_FOLDER
+UPLOAD_FOLDER = "/home/ubuntu/thesis/UPLOAD_FOLDER"  # Change to a valid directory
+#os.mkdir(UPLOAD_FOLDER, exist_ok=True)
+#app.config["UPLOAD_FOLDER"] = UPLOAD_FOLDER
 
 @app.route('/')
 def home():
