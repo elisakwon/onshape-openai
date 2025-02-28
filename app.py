@@ -31,7 +31,7 @@ logging.basicConfig(
 )
 
 UPLOAD_FOLDER = "/home/ubuntu/thesis"  # Change to a valid directory
-os.makedirs(UPLOAD_FOLDER, exist_ok=True)
+os.mkdir(UPLOAD_FOLDER, exist_ok=True)
 app.config["UPLOAD_FOLDER"] = UPLOAD_FOLDER
 
 @app.route('/')
