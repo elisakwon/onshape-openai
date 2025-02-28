@@ -13,7 +13,7 @@ import time
 app = Flask(__name__)
 
 # API Credentials
-openai.api_key = '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'
+openai.api_key = os.getenv("OPENAI_API_KEY")
 API_KEY = 'yNalRooq2QVIxSZNAI3i4vSJ'
 API_SECRET = 'jFLaOBoa8LQgb3qqLgdcxb4JlJe1R665HALCHp3NXhXOQhm6'
 API_KEY2 = 'Av64ZSAvZTRDvbB4IsK9Skc0'
