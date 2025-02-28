@@ -36,6 +36,22 @@
     
     <div id="response-message"></div>
 
+    <h2>Previous Responses</h2>
+    <ul id="previous-responses">
+        {% if outputs %}
+            {% for output in outputs %}
+                <li>
+                    <strong>Prompt:</strong> {{ output.prompt }}<br>
+                    <strong>AI Response:</strong> {{ output.ai_response }}<br>
+                    {% if output.image %}
+                        <img src="data:image/png;base64,{{ output.image }}" alt="Uploaded Image" width="300"><br>
+                        <a href="{{ output.image_path }}" download>Download Image</a><br>
+                    {% endif %}
+                </li>
+            {% endfor %}
+        {% endif %}
+    </ul>
+
     <script>
         $(document).ready(function(){
             var pastedImage = null;
@@ -73,12 +89,14 @@
                 // Send the data via AJAX
                 $.ajax({
                     type: 'POST',
-                    url: '/process-comment',
+                    url: '/',
                     data: formData,
                     processData: false,
                     contentType: false,
                     success: function(response) {
                         $('#response-message').html('<p>' + response.ai_response + '</p>');
+                        // Reload previous responses
+                        location.reload();
                     },
                     error: function(xhr) {
                         $('#response-message').html('<p style="color:red;">' + xhr.responseJSON.error + '</p>');
